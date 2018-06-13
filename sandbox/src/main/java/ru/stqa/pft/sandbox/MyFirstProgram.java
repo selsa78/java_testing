@@ -11,7 +11,20 @@ public class MyFirstProgram {
 
 		Rectangle r = new Rectangle(4, 6);
 		System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + area(r));
+
+		Point p1 = new Point(12, 8);
+		Point p2 = new Point(2, 45);
+		//System.out.println("Расстояние между точкой " + p1 + " и точкой " + p2 + " составляет " + distance(p1, p2));
+		System.out.println("Расстояние между точкой " + p1 + " и точкой " + p2 + " составляет " + p1.distance(p2));
+
+
 	}
+
+	public static double distance(Point p1, Point p2){
+		return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+	}
+
+
 	public static void hello(String somebody){		// Функция, которая выполняет команду вывода на экран текста с ее параметром somebody
 		System.out.println ("Hello, " + somebody + "!!!");		// В кавычках - литеральное значение
 	}
@@ -23,4 +36,6 @@ public class MyFirstProgram {
 	public static double area (Rectangle r){
 		return r.a * r.b;
 	}
+
+
 }
