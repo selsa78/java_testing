@@ -18,7 +18,7 @@ public class GroupCreationTests {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true)); //инициализация атрибута объекта
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://localhost/addressbook/");
-        login("admin", "secret");
+        login("admin", "secret"); //сделали метод параметризованным
     }
 
     private void login(String username, String password) {
