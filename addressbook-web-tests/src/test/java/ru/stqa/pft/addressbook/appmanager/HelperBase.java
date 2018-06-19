@@ -21,7 +21,7 @@ public class HelperBase {
     wd.findElement(locator).sendKeys(text);
   }
 
-  public boolean isAlertPresent() {
+  public static boolean isAlertPresent(FirefoxDriver wd) {
     try {
       wd.switchTo().alert();
       return true;
