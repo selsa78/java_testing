@@ -2,12 +2,13 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class HelperBase {
-  protected FirefoxDriver wd;               //wd - переменная, атрибут объекта типа GroupCreationTests; создание объекта этого класса
+  protected WebDriver wd;               //wd - переменная, атрибут объекта типа GroupCreationTests; создание объекта этого класса
 
-  public HelperBase(FirefoxDriver wd) {   //конструктор базового класса
+  public HelperBase(WebDriver wd) {   //конструктор базового класса
     this.wd = wd;
   }
 
@@ -21,7 +22,7 @@ public class HelperBase {
     wd.findElement(locator).sendKeys(text);
   }
 
-  public static boolean isAlertPresent(FirefoxDriver wd) {
+  public static boolean isAlertPresent(WebDriver wd) {
     try {
       wd.switchTo().alert();
       return true;

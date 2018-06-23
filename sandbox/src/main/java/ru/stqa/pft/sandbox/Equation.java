@@ -18,12 +18,14 @@ public class Equation {
     if (d > 0){
       n = 2;
     }
-    else {
-      if (d == 0) {
+      else if (d == 0) {
         n = 1;
-      } else {
+      }
+      else {
         n = 0;
       }
+    if (a == 0){
+      System.out.println("Это вырожденное уравнение");
     }
   }
   public int rootNumber(){
