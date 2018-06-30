@@ -8,7 +8,7 @@ public class GroupCreationTests extends TestBase {
     public void testGroupCreation() {
         app.getNavigationHelper().gotoGroupPage();
         app.getGroupHelper().initGroupCreation();
-        app.getGroupHelper().fillGroupForm(new GroupData("Group53", "Java-testing group 53", "Cool")); //создается новый объект, атрибуты которого заполняются конкретными значениями
+        app.getGroupHelper().fillGroupForm(new GroupData("Group53", null, null)); //создается новый объект, атрибуты которого заполняются конкретными значениями
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToGroupPage();
     }
