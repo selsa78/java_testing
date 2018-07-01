@@ -18,7 +18,7 @@ public class ContactHelper extends HelperBase {
     click(By.xpath("//div[@id='content']/form/input[21]"));
   }
 
-  public void fillContactCreation(ContactData contactData, boolean creation) {
+  public void fillContactForm(ContactData contactData, boolean creation) {
     type(By.name("firstname"), contactData.getFname());
     type(By.name("lastname"), contactData.getLname());
     type(By.name("mobile"), contactData.getMobile());
