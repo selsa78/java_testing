@@ -12,7 +12,7 @@ public class GroupModificationTests extends TestBase {
     if (! app.getGroupHelper().isThereAGroup()){
       app.getGroupHelper().createGroup(new GroupData("Group53", null, null));
     }
-    app.getGroupHelper().selectGroup();
+    app.getGroupHelper().selectGroup(before - 1);
     app.getGroupHelper().initGroupModification();
     app.getGroupHelper().fillGroupForm(new GroupData("Group54", "Java-testing group 53", "Cool")); //создается новый объект, атрибуты которого заполняются конкретными значениями
     app.getGroupHelper().submitGroupModification();
