@@ -3,23 +3,40 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class GroupData {      //объект, у которого 4 атрибута
-  private final String id;
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  private int id;
   private final String name;
   private final String header;
   private final String footer;
 
   public GroupData(String name, String header, String footer) {   //конструктор, который позволяет проинициализировать объект значениями
-    this.id = null;
+    this.id = 0;
     this.name = name;
     this.header = header;
     this.footer = footer;
   }
 
-  public GroupData(String id, String name, String header, String footer) {   //конструктор, который позволяет проинициализировать объект значениями
+  public GroupData(int id, String name, String header, String footer) {   //конструктор, который позволяет проинициализировать объект значениями
     this.id = id;
     this.name = name;
     this.header = header;
     this.footer = footer;
+  }
+  public  int getId() { return id;  }
+
+  public String getName() {
+    return name;
+  }   //три метода, которые возвращают атрибуты
+
+  public String getHeader() {
+    return header;
+  }
+
+  public String getFooter() {
+    return footer;
   }
 
   @Override
@@ -44,19 +61,4 @@ public class GroupData {      //объект, у которого 4 атрибу
             ", name='" + name + '\'' +
             '}';
   }
-
-  public String getId() { return id;  }
-
-  public String getName() {
-    return name;
-  }   //три метода, которые возвращают атрибуты
-
-  public String getHeader() {
-    return header;
-  }
-
-  public String getFooter() {
-    return footer;
-  }
-
 }
